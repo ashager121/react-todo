@@ -5,8 +5,26 @@ import settings from "./images/settings.png"
 import addButton from "./images/add.png"
 import editButton from "./images/edit.png"
 
+let todos = [{
+  id: 1,
+  description: "your description",
+  completed: false
+},
+{
+  id: 2,
+  description: "your description",
+  completed: true
+},
+{
+  id: 3,
+  description: "your description",
+  completed: false
+}
+]
+
 function App() {
   return (
+    //className App runs the whole thing
     <div className="App">
       <div className="header">
         <img src={hamburger} id="hamburger" alt="hamburger"></img>
@@ -19,7 +37,13 @@ function App() {
         <h1>To Do</h1>
         <div class="listBox">
           <ul className="listItems">
-            <input type="checkbox"></input><li>Wake Up</li>
+            {todos.map(todo => (
+              <li key={todo.id}>
+                <input type="checkbox" checked={todo.completed} />
+                {todo.description}
+              </li>
+            ))
+            }
           </ul>
         </div>
         <div class="listBox">
