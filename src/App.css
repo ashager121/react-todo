@@ -4,36 +4,60 @@
   justify-content: space-around;
 }
 .header img {
-  max-height: 100px;
-  max-width: 100px;
+  padding-top: 15px;
+  max-height: 50px;
+  max-width: 50px;
 }
 .toDoList h1 {
   text-align: center;
 }
 .listBox {
-  background-color: lightgray;
   max-width: 500px;
   margin: 0 auto;
 }
-.listBox .listItems {
-  display: flex;
-  justify-content: center;
-}
+
 .listItems {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
   padding: 30px;
+  margin: 0 auto;
+  border-bottom: gray;
 }
 .listItems li {
-  padding-left: 10px;
+  padding: 15px;
+  background-color: lightgray;
+  margin-top: 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-bottom:  double;
+  font-size: 1.125rem;
 }
+.listItems li p {
+  margin-left: 10px;
+}
+input[type=checkbox] { 
+  transform: scale(2);
+  }
 footer {
   background-color: gray;
   display: flex;
   justify-content: space-around;
 }
 footer img {
-  max-height: 100px;
-  max-width: 100px; 
+  padding-top: 15px;
+  max-height: 50px;
+  max-width: 50px; 
+}
+@media (min-width: 720px) {
+  .listItems li {
+    padding: 30px;
+  }
+  .header img {
+    max-height: 75px;
+    max-width: 75px;
+  }
+  footer img {
+    max-height: 75px;
+    max-width: 75px; 
+  }
 }

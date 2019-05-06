@@ -5,21 +5,27 @@ import settings from "./images/settings.png"
 import addButton from "./images/add.png"
 import editButton from "./images/edit.png"
 
-let todos = [{
-  id: 1,
-  description: "your description",
-  completed: false
-},
-{
-  id: 2,
-  description: "your description",
-  completed: true
-},
-{
-  id: 3,
-  description: "your description",
-  completed: false
-}
+let todos = [
+  {
+    id: 1,
+    description: "Wake Up",
+    completed: false
+  },
+  {
+    id: 2,
+    description: "Brush Hair",
+    completed: false
+  },
+  {
+    id: 3,
+    description: "Brush Teeth",
+    completed: false
+  },
+  {
+    id: 4,
+    description: "Leave for School",
+    completed: false
+  }
 ]
 
 function App() {
@@ -39,26 +45,11 @@ function App() {
           <ul className="listItems">
             {todos.map(todo => (
               <li key={todo.id}>
-                <input type="checkbox" checked={todo.completed} />
-                {todo.description}
+                <input type="checkbox" class="largerCheckbox" defaultChecked={todo.completed} />
+                <p>{todo.description}</p>
               </li>
             ))
             }
-          </ul>
-        </div>
-        <div class="listBox">
-          <ul className="listItems">
-            <input type="checkbox"></input><li>Brush Hair</li>
-          </ul>
-        </div>
-        <div class="listBox">
-          <ul className="listItems">
-            <input type="checkbox"></input><li>Brush Teeth</li>
-          </ul>
-        </div>
-        <div class="listBox">
-          <ul className="listItems">
-            <input type="checkbox"></input><li>Eat Breakfast</li>
           </ul>
         </div>
       </div>
