@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import hamburger from "./images/hamburger.png"
-import settings from "./images/settings.png"
-import addButton from "./images/add.png"
-import editButton from "./images/edit.png"
+import Todo from './Todo';
+import Header from './Header';
+import Footer from './Footer';
 
 
 class App extends React.Component {
@@ -43,14 +42,9 @@ class App extends React.Component {
   render() {
     return (
       //className App runs the whole thing
+
       <div className="App">
-        <div className="header">
-          <img src={hamburger} id="hamburger" alt="hamburger"></img>
-          <h1>
-            ToDo App
-              </h1>
-          <img src={settings} id="settings" alt="settings"></img>
-        </div>
+        <Header />
         <div className="toDoList">
           <h1>To Do</h1>
           {/* new input with text box and button */}
@@ -66,27 +60,13 @@ class App extends React.Component {
           <div className="listBox">
             <ul className="listItems">
               {this.state.todos.map((todo, index) => (
-                <li key={index}>
-                  <input type="checkbox"
-                    defaultChecked={todo.completed}
-                  />
-                  {todo.description}
-                </li>
+                <Todo key={index} todo={todo} />
               ))
               }
             </ul>
           </div>
         </div>
-        <footer>
-          <div className="addButtonElements">
-            <img src={addButton} id="add" alt="add"></img>
-            <h3>Add</h3>
-          </div>
-          <div className="editButtonElements">
-            <img src={editButton} id="edit" alt="edit"></img>
-            <h3>Edit</h3>
-          </div>
-        </footer>
+        <Footer />
       </div >
     )
   }
