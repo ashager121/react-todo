@@ -9,31 +9,13 @@
   justify-content: center;
   margin-top: 15px;
 }
-.addInput input {
-  padding: 15px;
-  background-color: gray;
-  font-size: 1.125rem;
-  color: white;
-  font-style: bold;
-}
-.addInput button {
-  padding: 15px;
-  background-color: lightgreen;
-  font-size: 1.125rem;
-}
+
 .toDoList h1 {
   text-align: center;
 }
 .listBox {
   max-width: 500px;
   margin: 0 auto;
-}
-
-.listItems {
-  list-style: none;
-  padding: 30px;
-  margin: 0 auto;
-  border-bottom: gray;
 }
 
 input[type=checkbox] { 

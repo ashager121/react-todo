@@ -1,5 +1,7 @@
 import React from 'react'
-let listStyle = {
+import styled from 'styled-components';
+
+const List = styled.li`
     padding: '15px',
     backgroundColor: 'lightgray',
     marginTop: '15px',
@@ -8,17 +10,29 @@ let listStyle = {
     alignItems: 'center',
     borderBottom: 'double',
     fontSize: '1.125rem'
-}
+`
+
+// let listStyle = {
+//     padding: '15px',
+//     backgroundColor: 'lightgray',
+//     marginTop: '15px',
+//     textAlign: 'center',
+//     display: 'flex',
+//     alignItems: 'center',
+//     borderBottom: 'double',
+//     fontSize: '1.125rem'
+// }
 
 export default class Todo extends React.Component {
     render() {
         return (
-            <li style={listStyle}>
+            //style=listStyle//
+            <List>
                 <input type="checkbox"
                     defaultChecked={this.props.todo.completed}
                 />
                 {this.props.todo.description}
-            </li >
+            </List >
         )
     }
 }
