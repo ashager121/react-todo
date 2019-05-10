@@ -2,26 +2,15 @@ import React from 'react'
 import styled from 'styled-components';
 
 const List = styled.li`
-    padding: '15px',
-    backgroundColor: 'lightgray',
-    marginTop: '15px',
-    textAlign: 'center',
-    display: 'flex',
-    alignItems: 'center',
-    borderBottom: 'double',
-    fontSize: '1.125rem'
+    padding: 15px;
+    background-color: lightgray;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-bottom: double;
+    font-size: 1.125rem;
 `
-
-// let listStyle = {
-//     padding: '15px',
-//     backgroundColor: 'lightgray',
-//     marginTop: '15px',
-//     textAlign: 'center',
-//     display: 'flex',
-//     alignItems: 'center',
-//     borderBottom: 'double',
-//     fontSize: '1.125rem'
-// }
 
 export default class Todo extends React.Component {
     render() {
