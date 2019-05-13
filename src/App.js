@@ -35,7 +35,7 @@ class App extends React.Component {
     todos: [
       {
         description: "Wake Up",
-        completed: false
+        completed: true
       },
       {
         description: "Brush Hair",

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const List = styled.li`
     padding: 15px;
@@ -10,13 +10,13 @@ const List = styled.li`
     align-items: center;
     border-bottom: double;
     font-size: 1.125rem;
+    text-decoration: ${props => props.completed ? 'line-through' : 'none'};
 `
 
 export default class Todo extends React.Component {
     render() {
         return (
-            //style=listStyle//
-            <List>
+            <List completed={this.props.todo.completed}>
                 <input type="checkbox"
                     defaultChecked={this.props.todo.completed}
                 />
